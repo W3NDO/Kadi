@@ -8,26 +8,26 @@ class Deck < ApplicationRecord
 end
 
 class Card
-    attr_accessor :face, :suite, :color
+    attr_accessor :face, :suit, :color
 
-    def initialize face, suite, color
+    def initialize face, suit, color
         @face = face
-        @suite = suite
+        @suit = suit
         @color = color
     end
 end
 
 class NewDeck
-    attr_accessor :cards, :suites, :starter_card
+    attr_accessor :cards, :suits, :starter_card
 
     def initialize
         @faces = [*(2..10), "J", "Q", "K", "A"]
-        @suites = {'CLUBS' => "black", 'SPADES' => 'black', "HEARTS" => 'red', "DIAMONDS" => "red"}
+        @suits = {'CLUBS' => "black", 'SPADES' => 'black', "HEARTS" => 'red', "DIAMONDS" => "red"}
         @cards = []
 
-        @suites.each do |suite, color|
+        @suits.each do |suit, color|
             @faces.each do |face|
-                @cards << Card.new(face, suite, color)
+                @cards << Card.new(face, suit, color)
             end
         end
 
