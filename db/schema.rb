@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_05_221554) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_06_223547) do
   create_table "decks", force: :cascade do |t|
     t.json "cards"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "starter_card"
   end
 
   create_table "players", force: :cascade do |t|
     t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "hand"
   end
 
   create_table "tables", force: :cascade do |t|

@@ -29,3 +29,4 @@ There is a starter_card placed on the table. The first player must match the fac
 
 The game ends if a player legally plays all the cards they have left in one move. 
 
+we will be getting inspiration from [here](https://github.com/danguilherme/uno)
